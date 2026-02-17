@@ -1,126 +1,157 @@
-# University Ranking & Admission Requirement Crawler
-
-*(Learning Project -- Non-Official API Usage)*
+# University Ranking Crawler (In Development)
 
 ------------------------------------------------------------------------
 
-## ⚠️ Disclaimer
+## ⚠️ Project Status
 
-This project is developed for **learning and academic exploration
-purposes only**.
+This project is currently under development.\
+Source code has not yet been fully organized or uploaded.
 
-It uses publicly accessible ranking pages from QS and attempts to
-extract ranking and admission-related information.\
-It is **not affiliated with QS** and does not guarantee:
-
--   Data completeness\
--   Data accuracy\
--   Long-term API stability\
--   Continuous availability
-
-QS may change its internal API or page structure at any time, which can
-cause this project to stop functioning.
+This repository currently serves as documentation of development
+progress and project structure planning.
 
 ------------------------------------------------------------------------
 
-# Project Overview
+## Project Description
 
-This is a modular Python crawler that:
+This is a personal learning project focused on:
 
--   Retrieves QS ranking data
--   Optionally fetches university detail pages
--   Extracts selected academic metrics
--   Outputs results to console or file formats
+-   Understanding ranking website data structures\
+-   Practicing modular Python project architecture\
+-   Experimenting with synchronous and asynchronous HTTP requests\
+-   Handling unstable external APIs\
+-   Basic data parsing and formatted output
 
-The project focuses on:
-
--   Modular architecture design
--   Network handling and retry mechanisms
--   Async vs Sync performance comparison
--   Error handling in unstable external APIs
+This project is for learning and research purposes only.\
+It is not affiliated with QS or any ranking organization.
 
 ------------------------------------------------------------------------
 
-# Current Architecture
+## Current Development Scope
 
-    clawer/
-    ├── clawer_main.py         # Entry point
-    ├── constants/             # Static preset data
-    ├── ui/                    # CLI and interactive menu
-    ├── utils/                 # Logging, retry, cache, helpers
-    ├── crawler.py             # Main orchestration controller
-    ├── fetcher.py             # HTTP layer (requests + aiohttp)
-    ├── extractor.py           # Parsing logic
-    ├── exporter.py            # Output layer
-    ├── config.py              # Central configuration
-    └── models.py              # Data structures
+The internal structure is being modularized into:
 
-------------------------------------------------------------------------
+-   Entry script (main)
+-   Crawler controller logic
+-   Network request layer (fetcher)
+-   Parsing layer (extractor)
+-   Output layer (exporter)
+-   Configuration module
+-   Data models
 
-## Supported Features (Current State)
-
-  -----------------------------------------------------------------------
-  Feature                     Status                Notes
-  --------------------------- --------------------- ---------------------
-  World Ranking               Generally works       Depends on API
-                                                    stability
-
-  Subject Ranking             Partially stable      Some subjects may
-                                                    return errors
-
-  National Ranking            Works with delay      Large countries may
-                                                    cause timeouts
-
-  Async Mode                  Experimental          May trigger rate
-                                                    limit
-
-  File Export                 Basic support         CSV/Excel/JSON
-  -----------------------------------------------------------------------
+The structure may change significantly as development continues.
 
 ------------------------------------------------------------------------
 
-## Known Limitations
+## Known Development Issues
 
-1.  QS internal API may return 404 or HTML instead of JSON.
-2.  Some subject rankings fail intermittently.
-3.  Async mode can cause timeout or rate limiting.
-4.  Admission requirement extraction is heuristic-based.
-5.  No persistent database (in-memory processing only).
-6.  No guarantee of long-term compatibility.
+During experimentation, the following issues were observed:
 
-------------------------------------------------------------------------
+-   API occasionally returns 404 or HTML instead of JSON\
+-   Some subject rankings produce inconsistent outputs\
+-   Async requests may cause timeout errors\
+-   SSL certificate verification errors on macOS virtual environments\
+-   API parameter changes may break compatibility
 
-# Installation
-
-``` bash
-pip install -r requirements.txt
-```
+These are part of the ongoing learning process.
 
 ------------------------------------------------------------------------
 
-# Usage
+## Learning Objectives
 
-## Interactive Mode
+This project aims to improve understanding of:
 
-``` bash
-python3 clawer_main.py
-```
-
-## CLI Mode
-
-``` bash
-python3 clawer_main.py --country us
-python3 clawer_main.py --country uk --limit 20
-python3 clawer_main.py --format csv --output output.csv
-```
+-   Python project structuring\
+-   Error handling and retry logic\
+-   Asynchronous programming (aiohttp)\
+-   Separation of concerns in software design
 
 ------------------------------------------------------------------------
 
-# Educational Purpose
+## Future Plans (Tentative)
 
-This repository is maintained as a learning and experimentation project.
+-   Further modular refactoring\
+-   Improved stability handling\
+-   Cleaner CLI interface\
+-   Better logging and error reporting
 
-Functionality may break if: - QS changes internal APIs - Ranking
-structure changes - Network policies change
+No timeline is guaranteed.
 
-Use at your own discretion.
+------------------------------------------------------------------------
+
+# 中文說明
+
+------------------------------------------------------------------------
+
+## ⚠️ 專案狀態
+
+本專案目前仍在開發與整理中，\
+尚未完整上傳所有程式碼。
+
+本倉庫暫時用於記錄架構規劃與開發過程。
+
+------------------------------------------------------------------------
+
+## 專案說明
+
+這是一個個人學習型專案，主要目的為：
+
+-   理解排名網站的資料結構\
+-   練習 Python 模組化專案設計\
+-   嘗試同步與非同步 HTTP 請求\
+-   學習如何處理不穩定的外部 API\
+-   基礎資料解析與輸出
+
+本專案僅供學習與研究用途，\
+與 QS 或任何官方機構無關。
+
+------------------------------------------------------------------------
+
+## 目前開發方向
+
+目前正在嘗試將專案拆分為：
+
+-   主程式入口\
+-   爬蟲控制邏輯\
+-   網路請求層\
+-   資料解析層\
+-   輸出模組\
+-   設定管理\
+-   資料模型
+
+架構仍可能大幅調整。
+
+------------------------------------------------------------------------
+
+## 開發過程遇到的問題
+
+-   API 偶爾回傳 404 或 HTML\
+-   部分 Subject Ranking 會出現例外\
+-   非同步請求可能 Timeout\
+-   macOS venv SSL 憑證問題\
+-   參數變動導致 API 失效
+
+以上問題仍在研究與調整中。
+
+------------------------------------------------------------------------
+
+## 學習目標
+
+本專案主要用於練習：
+
+-   Python 專案架構設計\
+-   錯誤處理與重試機制\
+-   非同步程式設計\
+-   模組化分層思維
+
+------------------------------------------------------------------------
+
+## 未來規劃（暫定）
+
+-   架構重構\
+-   穩定性優化\
+-   改善錯誤訊息\
+-   CLI 介面整理\
+-   程式碼清理
+
+尚無確定時程。
