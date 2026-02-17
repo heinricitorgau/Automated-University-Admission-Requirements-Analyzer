@@ -1,123 +1,126 @@
-# University Admission Requirements Crawler
+# University Ranking & Admission Requirement Crawler
 
-## Usage
+*(Learning Project -- Non-Official API Usage)*
 
-### 1. Installation
+------------------------------------------------------------------------
 
-```bash
+## ⚠️ Disclaimer
+
+This project is developed for **learning and academic exploration
+purposes only**.
+
+It uses publicly accessible ranking pages from QS and attempts to
+extract ranking and admission-related information.\
+It is **not affiliated with QS** and does not guarantee:
+
+-   Data completeness\
+-   Data accuracy\
+-   Long-term API stability\
+-   Continuous availability
+
+QS may change its internal API or page structure at any time, which can
+cause this project to stop functioning.
+
+------------------------------------------------------------------------
+
+# Project Overview
+
+This is a modular Python crawler that:
+
+-   Retrieves QS ranking data
+-   Optionally fetches university detail pages
+-   Extracts selected academic metrics
+-   Outputs results to console or file formats
+
+The project focuses on:
+
+-   Modular architecture design
+-   Network handling and retry mechanisms
+-   Async vs Sync performance comparison
+-   Error handling in unstable external APIs
+
+------------------------------------------------------------------------
+
+# Current Architecture
+
+    clawer/
+    ├── clawer_main.py         # Entry point
+    ├── constants/             # Static preset data
+    ├── ui/                    # CLI and interactive menu
+    ├── utils/                 # Logging, retry, cache, helpers
+    ├── crawler.py             # Main orchestration controller
+    ├── fetcher.py             # HTTP layer (requests + aiohttp)
+    ├── extractor.py           # Parsing logic
+    ├── exporter.py            # Output layer
+    ├── config.py              # Central configuration
+    └── models.py              # Data structures
+
+------------------------------------------------------------------------
+
+## Supported Features (Current State)
+
+  -----------------------------------------------------------------------
+  Feature                     Status                Notes
+  --------------------------- --------------------- ---------------------
+  World Ranking               Generally works       Depends on API
+                                                    stability
+
+  Subject Ranking             Partially stable      Some subjects may
+                                                    return errors
+
+  National Ranking            Works with delay      Large countries may
+                                                    cause timeouts
+
+  Async Mode                  Experimental          May trigger rate
+                                                    limit
+
+  File Export                 Basic support         CSV/Excel/JSON
+  -----------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+## Known Limitations
+
+1.  QS internal API may return 404 or HTML instead of JSON.
+2.  Some subject rankings fail intermittently.
+3.  Async mode can cause timeout or rate limiting.
+4.  Admission requirement extraction is heuristic-based.
+5.  No persistent database (in-memory processing only).
+6.  No guarantee of long-term compatibility.
+
+------------------------------------------------------------------------
+
+# Installation
+
+``` bash
 pip install -r requirements.txt
 ```
 
-### 2. Interactive Mode (Recommended)
+------------------------------------------------------------------------
 
-Simply run the script without arguments to use the interactive menu:
+# Usage
 
-```bash
+## Interactive Mode
+
+``` bash
 python3 clawer_main.py
 ```
 
-Follow the on-screen prompts to:
-1. Select ranking type
-2. Choose specific subjects
-3. Filter by country or region
-4. Set ranking limits
+## CLI Mode
 
-### 3. Command Line Interface (CLI)
-
-Run with arguments for direct execution:
-
-```bash
-# Default: World Top 100 universities, console output
-python3 clawer_main.py
-
-# specific country (e.g., US, UK, TW)
+``` bash
 python3 clawer_main.py --country us
 python3 clawer_main.py --country uk --limit 20
-python3 clawer_main.py --country tw
-
-# Export to file (CSV, Excel, JSON)
-python3 clawer_main.py --country ca --format excel --output canada_data.xlsx
-python3 clawer_main.py --country au --format csv --output australia_data.csv
-
-# Multi-country selection (CLI only supports single country code alias, use interactive for complex filters)
-python3 clawer_main.py --country "us" --limit 10
-
-# Show full help message
-python3 clawer_main.py --help
+python3 clawer_main.py --format csv --output output.csv
 ```
 
-## Supported Countries (Partial List)
+------------------------------------------------------------------------
 
-| Code | Country | Code | Country |
-|------|---------|------|---------|
-| `us` | United States | `sg` | Singapore |
-| `uk` | United Kingdom | `hk` | Hong Kong |
-| `ca` | Canada | `cn` | China |
-| `au` | Australia | `jp` | Japan |
-| `de` | Germany | `tw` | Taiwan |
-| `fr` | France | `kr` | South Korea |
+# Educational Purpose
 
-*Use interactive mode to see the full list of available countries.*
+This repository is maintained as a learning and experimentation project.
 
----
+Functionality may break if: - QS changes internal APIs - Ranking
+structure changes - Network policies change
 
-# 大學入學要求爬蟲 (QS Ranking Crawler)
-
-## 使用方法
-
-### 1. 安裝
-
-```bash
-pip install -r requirements.txt
-```
-
-### 2. 交互模式（推薦）
-
-直接執行腳本，無需參數即可使用交互式選單：
-
-```bash
-python3 clawer_main.py
-```
-
-按照螢幕提示操作：
-1. 選擇排名類型
-2. 選擇特定學科
-3. 根據國家或地區篩選
-4. 設定排名數量限制
-
-### 3. 命令行介面 (CLI)
-
-使用參數直接執行：
-
-```bash
-# 預設：世界前 100 大學，主控台輸出
-python3 clawer_main.py
-
-# 指定國家（例如：美國、英國、台灣）
-python3 clawer_main.py --country us
-python3 clawer_main.py --country uk --limit 20
-python3 clawer_main.py --country tw
-
-# 匯出到檔案（CSV, Excel, JSON）
-python3 clawer_main.py --country ca --format excel --output canada_data.xlsx
-python3 clawer_main.py --country au --format csv --output australia_data.csv
-
-# 多國選擇（CLI 僅支援單一國家代碼別名，複雜篩選請使用交互模式）
-python3 clawer_main.py --country "us" --limit 10
-
-# 顯示完整幫助訊息
-python3 clawer_main.py --help
-```
-
-## 支援國家（部分列表）
-
-| 代碼 | 國家 | 代碼 | 國家 |
-|------|------|------|------|
-| `us` | 美國 | `sg` | 新加坡 |
-| `uk` | 英國 | `hk` | 香港 |
-| `ca` | 加拿大 | `cn` | 中國 |
-| `au` | 澳洲 | `jp` | 日本 |
-| `de` | 德國 | `tw` | 台灣 |
-| `fr` | 法國 | `kr` | 南韓 |
-
-*使用交互模式可查看完整可用國家列表。*
+Use at your own discretion.
