@@ -1,4 +1,4 @@
-# University Ranking Crawler (In Development)
+# Automated University Admission Requirements Analyzer (In Development)
 
 ------------------------------------------------------------------------
 
