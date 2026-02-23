@@ -20,7 +20,7 @@ This is a personal learning project focused on:
 - Building reliable parsing and formatted output pipelines
 
 This project is for learning and research only.
-It is not affiliated with QS or any ranking organization.
+It is not affiliated with THE or any ranking organization.
 
 #### Performance Notes
 
@@ -72,7 +72,7 @@ It is not affiliated with QS or any ranking organization.
 - 建立穩定的資料解析與格式化輸出流程
 
 本專案僅供學習與研究用途，
-與 QS 或其他排名機構無關。
+與 THE 或其他排名機構無關。
 
 #### 效能說明
 
