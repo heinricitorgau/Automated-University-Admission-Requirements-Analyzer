@@ -1,4 +1,4 @@
-# University Ranking Crawler
+ # University Ranking Crawler
 
 ## Project Description / 專案說明
 
@@ -134,7 +134,7 @@ The project completed a modular refactor on **2026-02-17** with a layered struct
 - **2026-02-17**: Major modularization milestone (v2.0)
 - **2026-02-19**: Async-by-default performance update
 - **2026-02-21**: Region/Sustainability alignment, paging/filtering fixes, type-safety improvements
-- **2026-02-24**: Added 6 new engineering/data-science subject rankings (Chemical Engineering, Civil & Structural, Data Science & AI, Electrical & Electronic, Mechanical/Aeronautical/Manufacturing, Mineral & Mining); reordered subject list by category (Arts & Humanities → Engineering & Technology → Life Sciences & Medicine → Natural Sciences); added 4 new regional rankings (Asia, Europe, Latin America & The Caribbean, Sub-Saharan Africa 2026); reordered region menu to match QS official order with subregions grouped under parent region
+- **2026-02-24**: Added 6 new engineering/data-science subject rankings; reordered subject list by category; added 4 new regional rankings; reordered region menu to match QS official order with subregions grouped under parent region
 
 #### Current Stability Snapshot
 
@@ -166,7 +166,7 @@ The project completed a modular refactor on **2026-02-17** with a layered struct
 - **2026-02-17**：完成 v2.0 模組化重構里程碑
 - **2026-02-19**：改為預設 Async，提升抓取效能
 - **2026-02-21**：完成 Region/Sustainability 對齊，修補分頁/過濾與型別安全問題
-- **2026-02-24**：新增 6 個工程/資料科學 Subject Ranking 選項（Chemical Engineering、Civil & Structural、Data Science & AI、Electrical & Electronic、Mechanical/Aeronautical/Manufacturing、Mineral & Mining）；依分類重排 Subject 清單（Arts & Humanities → Engineering & Technology → Life Sciences & Medicine → Natural Sciences）；新增 4 個 Region Ranking 選項（Asia、Europe、Latin America & The Caribbean、Sub-Saharan Africa 2026）；依 QS 官網順序重排地區選單並將子區域歸組至對應主區域下
+- **2026-02-24**：新增 6 個工程/資料科學 Subject Ranking 選項；依分類重排 Subject 清單；新增 4 個 Region Ranking 選項；依 QS 官網順序重排地區選單並將子區域歸組至對應主區域下
 
 #### 目前穩定度概況
 
