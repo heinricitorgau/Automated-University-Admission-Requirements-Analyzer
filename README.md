@@ -47,14 +47,3 @@
 | 2026-02-19 | Async-by-default |
 | 2026-02-21 | Region/Sustainability alignment; paging & type-safety fixes |
 | 2026-02-24 | +6 subject rankings; +4 regional rankings; reordered menus |
-
----
-
-## Stability Snapshot / 穩定度
-
-| Feature | Status |
-|---|---|
-| World Ranking | High / 高 |
-| Subject Ranking | Medium / 中 |
-| National Ranking | Medium / 中 |
-| Async mode | Medium–Low / 中低 |
