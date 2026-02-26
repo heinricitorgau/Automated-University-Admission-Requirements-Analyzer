@@ -1,7 +1,7 @@
 # University Ranking Crawler
 
-> 個人學習專案，僅供研究用途，與 QS 或其他排名機構無關。
-> Personal learning project. Not affiliated with QS or any ranking organization.
+> 個人學習專案，僅供研究用途，與 THE 或其他排名機構無關。
+> Personal learning project. Not affiliated with THE or any ranking organization.
 
 ---
 
@@ -47,7 +47,7 @@
 | 2026-02-19 | Async-by-default |
 | 2026-02-21 | Region/Sustainability alignment; paging & type-safety fixes |
 | 2026-02-24 | +6 subject rankings; +4 regional rankings; reordered menus |
-| 2026-02-25 | Implemented QS-style table borders, shortened metric headers, and ASCII progress bar |
+| 2026-02-25 | Implemented THE-style table borders, shortened metric headers, and ASCII progress bar |
 
 ---
 
