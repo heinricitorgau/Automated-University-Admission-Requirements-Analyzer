@@ -9,15 +9,13 @@
 
 1. Async crawling is enabled by default; installing `aiohttp` is recommended.
 2. Tune `max_concurrent_requests` (default: 200) and `request_delay` (default: 0.01) in `config.py`.
-3. If you hit blocks or HTTP 429, increase delay or reduce concurrency.
-4. You can force async mode with `--async`.
+3. You can force async mode with `--async`.
 
 ---
 
 1. 預設啟用 Async 抓取，建議安裝 `aiohttp`。
 2. 可在 `config.py` 調整 `max_concurrent_requests`（預設 200）與 `request_delay`（預設 0.01）。
-3. 若遇到封鎖或 HTTP 429，請提高 delay 或降低並發。
-4. 可使用 `--async` 強制啟用 Async 模式。
+3. 可使用 `--async` 強制啟用 Async 模式。
 
 ---
 
