@@ -1,7 +1,7 @@
 # University Ranking Crawler
 
-> 個人學習專案，僅供研究用途，與 QS 或其他排名機構無關。
-> Personal learning project. Not affiliated with QS or any ranking organization.
+> 個人學習專案，僅供研究用途，與 THE 或其他排名機構無關。
+> Personal learning project. Not affiliated with THE or any ranking organization.
 
 ---
 
