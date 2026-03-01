@@ -1,11 +1,10 @@
 # University Ranking Crawler
 
-> 個人學習專案，僅供研究用途，與 THE 或其他排名機構無關。
 > Personal learning project. Not affiliated with THE or any ranking organization.
 
 ---
 
-## Performance Notes / 效能說明
+## Performance Notes 
 
 1. Async crawling is enabled by default; installing `aiohttp` is recommended.
 2. Tune `max_concurrent_requests` (default: 200) and `request_delay` (default: 0.01) in `config.py`.
@@ -13,13 +12,7 @@
 
 ---
 
-1. 預設啟用 Async 抓取，建議安裝 `aiohttp`。
-2. 可在 `config.py` 調整 `max_concurrent_requests`（預設 200）與 `request_delay`（預設 0.01）。
-3. 可使用 `--async` 強制啟用 Async 模式。
-
----
-
-## Architecture / 架構
+## Architecture 
 
 | File | Role |
 |---|---|
@@ -32,7 +25,7 @@
 
 ---
 
-## Development Timeline / 開發時程
+## Development Timeline 
 
 | Date | Changes |
 |---|---|
@@ -50,11 +43,11 @@
 
 ---
 
-## Stability Snapshot / 穩定度
+## Stability Snapshot 
 
 | Feature | Status |
 |---|---|
-| World Ranking | High / 高 |
-| Subject Ranking | Medium / 中 |
-| National Ranking | Medium / 中 |
-| Async mode | High / 高 |
+| World Ranking | High |
+| Subject Ranking | Medium |
+| National Ranking | Medium |
+| Async mode | High |
